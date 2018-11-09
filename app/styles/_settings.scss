@@ -1,0 +1,11 @@
+// Color Palette
+////////////////////////
+$color-main: skyblue;
+$color-white: white;
+
+// Header Settings
+////////////////////////
+$header-height: 52px;
+$header-height-half: 26px;
+$header-height-rem: remCalc(52);
+$header-height-rem-half: $header-height / 2;

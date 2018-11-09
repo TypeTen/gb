@@ -1,8 +1,8 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  tagName: 'div',
-  classNames: ['nav'],
+  tagName: 'nav',
+  classNames: ['nav preload'],
   attributeBindings: ['id'],
-  id: ''
+  id: 'nav'
 });

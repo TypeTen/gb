@@ -11,4 +11,9 @@ const App = Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
+setTimeout(function(){
+    let flag = document.getElementById("nav");
+    flag.classList.remove("preload");
+},1000);
+
 export default App;

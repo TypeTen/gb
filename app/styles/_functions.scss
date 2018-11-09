@@ -1,0 +1,30 @@
+// Simple rem calculator
+// Accepts single numbers "52", "64", etc.
+// Fails units "52px", "64rem", etc.
+////////////////////////
+@function remCalc($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+// Animations
+////////////////////////
+@keyframes rotate{
+  0%{ transform: rotate(0deg); }
+  100%{ transform: rotate(90deg); }
+}
+
+@keyframes neg-rotate{
+  0%{ transform: rotate(0deg); }
+  100%{ transform: rotate(-90deg); }
+}
+
+@keyframes slide {
+  0%{ display: block; transform: translateX(-100px); }
+  100%{ display: block; transform: translateX(0px); }
+}
+
+@keyframes slideback {
+  0%{ display: block; transform: translateX(0px); }
+  100%{ display: block; transform: translateX(-100px); }
+}
