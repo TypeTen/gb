@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+    <canvas id="myCanvas" width="512" height="512">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+
+    <script>
+        const spriteSize = 32;
+        const mapX = 512;
+        const mapY = 512;
+        const mapSegs = mapX/spriteSize;
+
+        let c = document.getElementById("myCanvas");
+        let ctx = c.getContext("2d");
+
+        for (let x = 0; x < mapSegs; x = (x + 1)) {
+        	for (let y = 0; y < mapSegs; y = (y + 1)) {
+              ctx.rect((x * spriteSize), (y * spriteSize), spriteSize, spriteSize);
+            }
+        }
+        ctx.lineWidth=1;
+        ctx.strokeStyle="#cccccc";
+        ctx.stroke();
+    </script>
+    </body>
+</html>
