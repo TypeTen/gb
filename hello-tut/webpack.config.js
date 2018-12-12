@@ -65,9 +65,6 @@ module.exports = {
             title: 'Hey up.',
             description: 'Desc',
             //filename: 'subfolder/customname.html',
-            meta: {
-                viewport: 'width=device-width, initial-scale=1'
-            },
             template: 'src/index.hbs'
         })
     ]
