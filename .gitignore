@@ -21,3 +21,7 @@
 /.node_modules.ember-try/
 /bower.json.ember-try
 /package.json.ember-try
+
+# hello-tut
+/hello-tut/node_modules/
+/hello-tut/dist/
