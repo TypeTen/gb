@@ -1,10 +1,11 @@
 class Counter {
-    render(gains, count) {
-        let addition = 0;
-        addition = gains;
-
-        counter = counter + gains;
-        h1.innerHTML = counter;
+    a(vagrants, h1, count) {
+        count = parseInt(count, 10) + parseInt(vagrants, 10);
+        h1.innerHTML = count;
+    }
+    b(villagers, h1, count) {
+        count = parseInt(count, 10) + parseInt(villagers, 10);
+        h1.innerHTML = count;
     }
 }
 

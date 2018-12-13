@@ -4,31 +4,39 @@ import Counter from './components/counter/counter.js';
 import addImage from './add-image.js';
 
 const heading = new Heading();
-heading.render(gains);
+heading.render();
 const h1 = document.querySelector('h1');
 let count = h1.innerHTML;
 const counter = new Counter();
+const countdownTimer = 10;
 
 const helloWorldButton = new HelloWorldButton();
 helloWorldButton.click(h1);
 
-let loop = window.setInterval(updater, 10); //miliseconds
+let loop = window.setInterval(updater, countdownTimer); //miliseconds
 let iteration = 0; //t
-let gains = 0;
-helloWorldButton.add(gains);
+let vagrants = 0;
+let villagers = 0;
+helloWorldButton.add(vagrants, h1, 'vagrants');
+helloWorldButton.add(villagers, h1, 'villagers');
+
+console.log(document.querySelectorAll('button'));
+
+let vagrantsButton = document.querySelectorAll('button')[1];
+let villagersButton = document.querySelectorAll('button')[2];
 
 
 function updater() {
+    vagrants = vagrantsButton.innerHTML;
+    villagers = villagersButton.innerHTML;
+    count = h1.innerHTML;
+    console.log('count: ' + count + ' | ' + vagrants);
+
     if (iteration == 100) { //Happens every second
-        if (gains > 1) {
-            counter.render(gains, count);
-            console.log('aaaa: ' + count);
-        }
+      if (vagrants > 0) counter.a(vagrants, h1, count);
+      if (villagers > 0) counter.b(villagers, h1, count);
     } else if ((iteration % 10) == 0) { //Happens every tenth
     }
-
-    count = h1.innerHTML;
-    console.log('count: ' + count);
 
     if (iteration < 100) {
         iteration++;

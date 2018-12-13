@@ -3,3 +3,10 @@ body {
   font-size: 1rem;
   margin: 0;
 }
+
+.shrine {
+  background-color: $color-white;
+  display: inline-block;
+  position: absolute;
+  width: 50%;
+}
