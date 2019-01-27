@@ -33,8 +33,8 @@ function updater() {
     console.log('count: ' + count + ' | ' + vagrants);
 
     if (iteration == 100) { //Happens every second
-      if (vagrants > 0) counter.a(vagrants, h1, count);
-      if (villagers > 0) counter.b(villagers, h1, count);
+      if (vagrants > 0) counter.a('vag', vagrants, h1, count);
+      if (villagers > 0) counter.b('vil', villagers, h1, count);
     } else if ((iteration % 10) == 0) { //Happens every tenth
     }
 

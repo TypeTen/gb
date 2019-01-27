@@ -19,25 +19,37 @@ class HelloWorldButton {
         }
     }
 
-    add(vagrants, h1, id) {
+    add(id, itemAmount, h1) {
         const body = document.querySelector('body');
         const button = document.createElement('button');
 
-        button.innerHTML = vagrants;
+        button.innerHTML = itemAmount;
         button.classList.add(this.buttonCssClass);
         body.appendChild(button);
 
         button.onclick = function() {
           let counter = h1.innerHTML;
-          let cost = 10 * (parseInt(button.innerHTML, 10) + 1);
+          let cost = 10 * (parseInt(itemAmount, 10) + 1);
           // console.log('counter: ' + counter);
+
+          switch (id) {
+            case 'vag':
+
+              break;
+            case 'vil':
+
+              break;
+            default:
+
+          }
+
           if (counter >= cost) {
-            vagrants++;
+            itemAmount++;
             counter = counter - cost;
             h1.innerHTML = counter;
 
-            button.innerHTML = vagrants;
-            // console.log('vagrants: ' + vagrants);
+            button.innerHTML = itemAmount;
+            // console.log('itemAmount: ' + itemAmount);
           }
         }
     }
